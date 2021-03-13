@@ -10,7 +10,6 @@ services:
       - "8081:80"
     environment:
       - NGINX_HOST=${NGINX_HOST}
-    command: /bin/sh -c "nginx -g 'daemon off;'"
     restart: always
     depends_on:
       - php
