@@ -12,7 +12,7 @@ services:
     restart: always
     depends_on:
       - php
-      - mysqldb
+      - mysql
   php:
     build:
       context: .
@@ -22,9 +22,9 @@ services:
     restart: always
     volumes:
       - "./src:/var/www/html"
-      - "./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
+      - "./etc/php/:/usr/local/etc/php/conf.d"
       - "./etc/php-fpm/www.conf:/usr/local/etc/php-fpm.d/www.conf"
-  mysqldb:
+  mysql:
     image: mysql:${MYSQL_VERSION}
     container_name: ${MYSQL_HOST}
     restart: always
