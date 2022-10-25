@@ -3,7 +3,7 @@
 
 Docker L(inux)E(Nginx) M(ySQL) P(HP) was made to have local setup ready for development up in basically no time. 
 
-## :tad-da: Startup 
+## :tada: Startup 
 Run the following commands:
 1. copy the `.env.example` to `.env` 
 ```bash
