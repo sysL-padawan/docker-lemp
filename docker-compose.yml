@@ -1,4 +1,3 @@
-version: '3'
 services:
   web:
     image: nginx:${NGINX_VERSION}-alpine
@@ -29,6 +28,8 @@ services:
     image: mysql:${MYSQL_VERSION}
     container_name: ${MYSQL_HOST}
     restart: always
+    volumes:
+      - "./docker/mysql/:/docker-entrypoint-initdb.d/"
     env_file:
       - ".env"
     environment:

@@ -1,17 +1,35 @@
-# Dockerized Lemp by Padawan 
-### Startup 
-Copy the **.env.example** file to **.env** and run the up command:  
-`docker-compose up -d`
+# Dockerized Lemp
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-It will build the images when you run it for the first time. Afterwards you should be able to see the phpinfo() on
-http://localhost:8081/ in your preferred browser.
+Docker L(inux)E(Nginx) M(ySQL) P(HP) was made to have local setup ready for development up in basically no time. 
 
-### Configs 
-To change the version of Nginx, PHP or MYSQL take a look at .env file. After this run the build again.  
+## :tada: Startup 
+Run the following commands:
+1. copy the `.env.example` to `.env` 
+```bash
+cp .env.example .env
+```
+2. Start up the docker containers
+```bash
+docker-compose up -d
+```
+
+It will build the images and start up the containers. Afterwards you should be able to see the phpinfo() output on the exposed port: `8081`.
+Open the following URL in your preferred browser: `http://localhost:8081`
+Now you are ready to just drop your PHP code inside the `/src` folder.
+
+### Stop the containers
+`docker-compose stop`
+
+### Initial MySQL data 
+Do you need to have initial MySQL data? No worries I got you! Just drop your SQL file inside the 
+
+`./docker/mysql/` folder. There is an empty SQL file already. This will be imported on container start up.
+
+## :gear: Configs 
+To change the version of Nginx, PHP or MYSQL take a look at `.env `file. After this run the build again.  
 
 `docker-compose up -d --build`
 
-Other configs for the specific services can be found in **/etc/** folder.
+Other configs for a specific service can be found in `/etc/` folder.
 
-### Stop the containers 
-`docker-compose stop`
