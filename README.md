@@ -27,9 +27,9 @@ Do you need to have initial MySQL data? No worries I got you! Just drop your SQL
 `./docker/mysql/` folder. There is an empty SQL file already. This will be imported on container start up.
 
 ## :gear: Configs 
-To change the version of Nginx, PHP or MYSQL take a look at .env file. After this run the build again.  
+To change the version of Nginx, PHP or MYSQL take a look at `.env `file. After this run the build again.  
 
 `docker-compose up -d --build`
 
-Other configs for the specific services can be found in **/etc/** folder.
+Other configs for a specific service can be found in `/etc/` folder.
 
