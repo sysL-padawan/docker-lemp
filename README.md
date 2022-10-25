@@ -21,7 +21,7 @@ Now you are ready to just drop your PHP code inside the `/src` folder.
 ### Stop the containers
 `docker-compose stop`
 
-### initial MySQL data 
+### Initial MySQL data 
 Do you need to have initial MySQL data? No worries I got you! Just drop your SQL file inside the 
 
 `./docker/mysql/` folder. There is an empty SQL file already. This will be imported on container start up.
